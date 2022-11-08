@@ -68,8 +68,8 @@ void cmplx_idft(cmplx_t *input, cmplx_t *output, int N) {
 
          cmplx_mul(*(input + n), e, rez);
 
-         *membk += rez[0] / 10;
-         *(membk + 1) += rez[1] / 10;
+         *membk += rez[0] / N;
+         *(membk + 1) += rez[1] / N;
       }
 
       output[k][0] = *membk;
